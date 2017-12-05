@@ -1,0 +1,46 @@
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <errno.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define SZ_BUF 1024
+
+int main(int argc, char* argv[])
+{
+	if(argc != 3)
+	{	
+		perror("Invalid Argument !!\n"); 
+		exit(0);
+	}
+	
+	int fd1, fd2;
+	ssize_t fd1_size,fd2_size;
+
+	fd1 = open(argv[1], O_RDONLY);
+	fd2 = open(argv[2], O_WRONLY | O_CREAT , 0666);
+
+	if (fd1 == -1)
+	{
+		printf("Open \"%s\" Failure\n",argv[1]);
+	}	
+
+	if (fd2 == -1)
+	{
+		printf("Open \"%s\" Failure\n",argv[2]);
+	}
+	
+	int nb;
+	char buf[SZ_BUF];
+	while(nb = read(fd1,buf,SZ_BUF))
+	{
+		write(fd2,buf,nb);
+	}
+	close(fd1);
+	close(fd2);
+	return 0;
+}
+

@@ -1,0 +1,13 @@
+total 52
+drwxr-xr-x  3 root root 4096 Nov  6 03:06 .
+drwxr-xr-x 23 ryan ryan 4096 Nov  6 03:06 ..
+-rwxr-xr-x  1 root root 8968 Nov  6 00:00 cp_call
+-rw-r--r--  1 root root  660 Nov  6 00:00 cp_call.c
+-rw-r--r--  1 root root  660 Nov  6 00:00 new_file.txt
+-rw-r--r--  1 root root  611 Nov  6 03:06 text.txt
+-rwxr-xr-x  1 root root 8976 Nov  6 02:33 user_tee
+-rw-r--r--  1 root root 1050 Nov  6 02:45 user_tee.c
+drwxr-xr-x  2 root root 4096 Nov  5 23:05 week9
+wxr-xr-x  1 root root  8976 Nov  6 02:33 user_tee
+-rw-r--r--  1 root root  1050 Nov  6 02:45 user_tee.c
+drwxr-xr-x  2 root root  4096 Nov  5 23:05 week9
